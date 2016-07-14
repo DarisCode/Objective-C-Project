@@ -42,7 +42,18 @@
             NSLog(@"Geocode failed with error: %@", error);
             return;
         }
-                     
+        
+        /* 導航-決定起點 */
+        // Decide Source MapItem
+        //丟進經緯度
+        CLLocationCoordinate2D sourceCoordinate = CLLocationCoordinate2DMake(24.686525, 121.815312);
+        MKPlacemark *sourcePlace = [[MKPlacemark alloc] initWithCoordinate:sourceCoordinate
+                                                         addressDictionary:nil];
+        
+        MKMapItem *sourceMapItem = [[MKMapItem alloc]initWithPlacemark:sourcePlace];
+        
+        
+        /**/
                      
         CLPlacemark *targetPlacemark = placemarks[0];
                          
@@ -59,7 +70,11 @@
         //選項
         NSDictionary * options =@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving};
         
-        [targetMapItem openInMapsWithLaunchOptions:options];
+        
+//        [targetMapItem openInMapsWithLaunchOptions:options];
+        
+        //導航用
+        [MKMapItem openMapsWithItems:@[sourceMapItem,targetMapItem] launchOptions:options];
         
         
         

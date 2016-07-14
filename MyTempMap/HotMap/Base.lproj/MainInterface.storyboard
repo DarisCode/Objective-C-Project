@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eek-sb-0we">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eek-sb-0we" secondAttribute="height" multiplier="1:1" id="ihS-xI-4jS"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmF-GN-Adv">
+                                <rect key="frame" x="251" y="270" width="53" height="30"/>
+                                <color key="tintColor" red="0.10699118589743595" green="0.10661101031660439" blue="0.10680384953751655" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshBtnPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="zjQ-FV-Usz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="caq-eC-Wjo">
+                                <rect key="frame" x="251" y="240" width="51" height="30"/>
+                                <color key="tintColor" red="0.10699118589999999" green="0.1066110103" blue="0.10680384950000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Launch"/>
+                                <connections>
+                                    <action selector="launchBtnPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="AUe-Up-0tH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="eek-sb-0we" firstAttribute="bottom" secondItem="FKl-LY-JtV" secondAttribute="top" id="FFr-V5-f37"/>
+                            <constraint firstItem="eek-sb-0we" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="Of6-j8-hCK"/>
+                            <constraint firstAttribute="trailing" secondItem="eek-sb-0we" secondAttribute="trailing" id="RuB-ou-hZs"/>
+                            <constraint firstItem="eek-sb-0we" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="lGP-ZL-0gj"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="320"/>
+                    <connections>
+                        <outlet property="mainImage" destination="eek-sb-0we" id="OzX-2E-Ke2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="218"/>
+        </scene>
+    </scenes>
+</document>
